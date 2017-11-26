@@ -23,8 +23,8 @@ import (
 	"google.golang.org/api/option"
 	htransport "google.golang.org/api/transport/http"
 
-	"github.com/howdy39/translate/version"
 	raw "github.com/howdy39/translate/internal/translate/v2"
+	//raw "translate/internal/translate/v2"
 	"golang.org/x/net/context"
 	"golang.org/x/text/language"
 )
@@ -233,5 +233,5 @@ type Language struct {
 }
 
 func setClientHeader(headers http.Header) {
-	headers.Set("x-goog-api-client", fmt.Sprintf("gl-go/%s gccl/%s", version.Go(), version.Repo))
+	headers.Set("x-goog-api-client", fmt.Sprintf("gl-go/%s gccl/%s", Go(), Repo))
 }

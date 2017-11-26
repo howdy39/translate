@@ -3,7 +3,7 @@
 
 [[projects]]
   name = "cloud.google.com/go"
-  packages = ["compute/metadata","internal/testutil","internal/version","translate/internal/translate/v2"]
+  packages = ["compute/metadata","internal/testutil"]
   revision = "2d3a6656c17a60b0815b7e06ab0be04eacb6e613"
   version = "v0.16.0"
 
@@ -18,12 +18,6 @@
   packages = ["cmp","cmp/internal/diff","cmp/internal/function","cmp/internal/value"]
   revision = "8099a9787ce5dc5984ed879a3bda47dc730a8e97"
   version = "v0.1.0"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/howdy39/translate"
-  packages = ["."]
-  revision = "f753c4459afc65335ab34ee075dfe2c366a9b81a"
 
 [[projects]]
   branch = "master"
@@ -46,7 +40,7 @@
 [[projects]]
   branch = "master"
   name = "google.golang.org/api"
-  packages = ["gensupport","googleapi","googleapi/internal/uritemplates","googleapi/transport","internal","option","transport/http"]
+  packages = ["googleapi/transport","internal","option","transport/http"]
   revision = "b804618854e387dc7fdd9e50496183ddcbb4b120"
 
 [[projects]]
@@ -70,6 +64,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "a62f031bd138547b1e78241a5fe083870f53a0621cad88bde7ed391c6a4ceb24"
+  inputs-digest = "3e0b0a4c1dd64a7032794dbe64fa3be40a72309df59a404e0f3e4f7a0b59e8ad"
   solver-name = "gps-cdcl"
   solver-version = 1

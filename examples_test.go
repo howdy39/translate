@@ -18,7 +18,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/howdy39/translate"
+	//"github.com/howdy39/translate"
+	"translate"
 	"context"
 	"golang.org/x/text/language"
 	"strings"

@@ -18,10 +18,10 @@
 //
 // Usage example:
 //
-//   import "cloud.google.com/go/translate/internal/translate/v2"
+//   import "github.com/howdy39/translate/internal/translate/v2"
 //   ...
 //   translateService, err := translate.New(oauthHttpClient)
-package translate // import "cloud.google.com/go/translate/internal/translate/v2"
+package translate // import "github.com/howdy39/translate/internal/translate/v2"
 
 import (
 	"bytes"
