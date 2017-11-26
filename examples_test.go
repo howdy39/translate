@@ -65,7 +65,7 @@ func TestTranslateJA1000(t *testing.T) {
 		t.Fatal(err)
 	}
 	translations, err := client.Translate(ctx,
-		[]string{strings.Repeat("おはよう。",200)}, language.English,
+		[]string{strings.Repeat("おはよう。",2)}, language.English,
 		&translate.Options{
 			Source: language.Japanese,
 			Format: translate.Text,
@@ -87,4 +87,5 @@ func TestTranslateJA1000(t *testing.T) {
 		*/
 	}
 	fmt.Println(translations[0].Text)
+	fmt.Println(translations[1].Text)
 }

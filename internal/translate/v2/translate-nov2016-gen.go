@@ -685,8 +685,16 @@ func (c *TranslationsListCall) doRequest(alt string) (*http.Response, error) {
 	var body io.Reader = nil
 	c.urlParams_.Set("alt", alt)
 	urls := googleapi.ResolveRelative(c.s.BasePath, "v2")
-	urls += "?" + c.urlParams_.Encode()
-	req, _ := http.NewRequest("GET", urls, body)
+	//urls += "?" + c.urlParams_.Encode()
+	fmt.Printf("%v\n", c.urlParams_)
+	fmt.Printf("urls:%s\n", urls)
+	body = strings.NewReader(`{
+		"q": "hello",
+		"q": "good morning",
+		"target": "ja",
+		"format": "text"
+	}`)
+	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
 	return gensupport.SendRequest(c.ctx_, c.s.client, req)
 }
