@@ -23,7 +23,7 @@ import (
 	"google.golang.org/api/option"
 	htransport "google.golang.org/api/transport/http"
 
-	"github.com/howdy39/version"
+	"github.com/howdy39/translate/version"
 	raw "github.com/howdy39/translate/internal/translate/v2"
 	"golang.org/x/net/context"
 	"golang.org/x/text/language"
