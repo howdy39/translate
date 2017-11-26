@@ -21,7 +21,8 @@
 //   import "github.com/howdy39/translate/internal/translate/v2"
 //   ...
 //   translateService, err := translate.New(oauthHttpClient)
-package translate // import "github.com/howdy39/translate/internal/translate/v2"
+package translate
+// import "github.com/howdy39/translate/internal/translate/v2"
 
 import (
 	"bytes"
