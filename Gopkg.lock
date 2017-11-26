@@ -3,7 +3,7 @@
 
 [[projects]]
   name = "cloud.google.com/go"
-  packages = ["compute/metadata","internal/testutil","internal/version","translate","translate/internal/translate/v2"]
+  packages = ["compute/metadata","internal/testutil","internal/version","translate/internal/translate/v2"]
   revision = "2d3a6656c17a60b0815b7e06ab0be04eacb6e613"
   version = "v0.16.0"
 
@@ -18,6 +18,12 @@
   packages = ["cmp","cmp/internal/diff","cmp/internal/function","cmp/internal/value"]
   revision = "8099a9787ce5dc5984ed879a3bda47dc730a8e97"
   version = "v0.1.0"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/howdy39/translate"
+  packages = ["."]
+  revision = "f753c4459afc65335ab34ee075dfe2c366a9b81a"
 
 [[projects]]
   branch = "master"
@@ -64,6 +70,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "77f17b0d6b4fb17a40da99d688e5ecadfda9c52c3a2674d09dd2721a23739737"
+  inputs-digest = "a62f031bd138547b1e78241a5fe083870f53a0621cad88bde7ed391c6a4ceb24"
   solver-name = "gps-cdcl"
   solver-version = 1
