@@ -65,7 +65,7 @@ func TestTranslateJA1000(t *testing.T) {
 		t.Fatal(err)
 	}
 	translations, err := client.Translate(ctx,
-		[]string{strings.Repeat("おはよう。",2)}, language.English,
+		[]string{strings.Repeat("おはよう。",200)}, language.English,
 		&translate.Options{
 			Source: language.Japanese,
 			Format: translate.Text,
@@ -87,5 +87,77 @@ func TestTranslateJA1000(t *testing.T) {
 		*/
 	}
 	fmt.Println(translations[0].Text)
-	fmt.Println(translations[1].Text)
+}
+
+func TestTranslateJA30000(t *testing.T) {
+	ctx := context.Background()
+	client, err := translate.NewClient(ctx)
+	if err != nil {
+		t.Fatal(err)
+	}
+	translations, err := client.Translate(ctx,
+		[]string{strings.Repeat("おはよう。",6000)}, language.English,
+		&translate.Options{
+			Source: language.Japanese,
+			Format: translate.Text,
+		})
+	if err != nil {
+		t.Fatal(err)
+	}
+	fmt.Println(translations[0].Text)
+}
+
+
+func TestTranslateJA35000(t *testing.T) {
+	ctx := context.Background()
+	client, err := translate.NewClient(ctx)
+	if err != nil {
+		t.Fatal(err)
+	}
+	translations, err := client.Translate(ctx,
+		[]string{strings.Repeat("おはよう。",7000)}, language.English,
+		&translate.Options{
+			Source: language.Japanese,
+			Format: translate.Text,
+		})
+	if err != nil {
+		t.Fatal(err) // googleapi: Error 400: Text too long, invalid
+	}
+	fmt.Println(translations[0].Text)
+}
+
+func TestTranslateEN35000(t *testing.T) {
+	ctx := context.Background()
+	client, err := translate.NewClient(ctx)
+	if err != nil {
+		t.Fatal(err)
+	}
+	translations, err := client.Translate(ctx,
+		[]string{strings.Repeat("hello. ",5000)}, language.Japanese,
+		&translate.Options{
+			Source: language.English,
+			Format: translate.Text,
+		})
+	if err != nil {
+		t.Fatal(err)
+	}
+	fmt.Println(translations[0].Text)
+}
+
+func TestTranslateEN70000(t *testing.T) {
+	ctx := context.Background()
+	client, err := translate.NewClient(ctx)
+	if err != nil {
+		t.Fatal(err)
+	}
+	translations, err := client.Translate(ctx,
+		[]string{strings.Repeat("hello. ",10000)}, language.Japanese,
+		&translate.Options{
+			Source: language.English,
+			Format: translate.Text,
+		})
+	if err != nil {
+		t.Fatal(err)
+	}
+	fmt.Println(translations[0].Text)
 }
